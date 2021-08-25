@@ -4,23 +4,24 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 START_TEXT = """
-Hello {}, This is a QR code generator bot by @NxtStark.
+Hello {}, <b>This is a QR code generator bot by @NxtStark .</b>
+<b>Join:</b> https://telegram.me/HTechMedia
 Made by @HTechMedia
 """
 HELP_TEXT = """
-- You can encode and decode QRCode.
-- Send any URL or text, this bot can convert to QRCode.
-- You can send a QR code image and decode it.
+- <b>You can encode and decode QRCode.</b>
+- <b>Send any URL or text, this bot can convert to QRCode.</b>
+- <b>You can send a QR code image and decode it.</b>
 Made by @HTechMedia
 """
 ABOUT_TEXT = """
-- **Bot :** `QRCode-Telegram-bot`
-- **Creator :** [NxtStark](https://telegram.me/NxtStark)
-- **Channel :** [HTechMedia](https://telegram.me/HTechMedia)
-- **Source :** [Click here](https://github.com/HTechMediaYT/QRCode-Telegram-bot/tree/main)
-- **Language :** [Python3](https://python.org)
-- **Library :** [Pyrogram](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
+- <b>Bot : QRCode-Telegram-bot</b>
+- <b>Creator :</b> [NxtStark](https://telegram.me/NxtStark)
+- <b>Channel :</b> [HTechMedia](https://telegram.me/HTechMedia)
+- <b>Source :</b> [Click here](https://github.com/HTechMediaYT/QRCode-Telegram-bot/tree/main)
+- <b>Language :</b> [Python3](https://python.org)
+- <b>Library :</b> [Pyrogram](https://pyrogram.org)
+- <b>Server :</b> [Heroku](https://heroku.com)
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
