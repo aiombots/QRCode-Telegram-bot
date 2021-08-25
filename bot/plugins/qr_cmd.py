@@ -8,7 +8,7 @@ Hello {},
 <b>This is a QR code generator bot by @NxtStark.</b>
 <b>Join:</b> @HTechMedia
 
-Made by @HTechMedia
+<b>Made by @HTechMedia</b>
 """
 HELP_TEXT = """
 - <b>You can encode and decode QRCode.</b>
@@ -18,13 +18,13 @@ HELP_TEXT = """
 Made by @HTechMedia
 """
 ABOUT_TEXT = """
-- Bot : QRCode-Telegram-bot
-- Creator : NxtStark
-- Channel : HTechMedia
-- Source :https://github.com/HTechMediaYT/QRCode-Telegram-bot
-- Language : https://python.org
-- Library : https://pyrogram.org
-- Server : https://heroku.com
+<b>- Bot : QRCode-Telegram-bot</b>
+<b>- Creator : NxtStark</b>
+<b>- Channel : HTechMedia</b>
+<b>- Source :https://github.com/HTechMediaYT/QRCode-Telegram-bot</b>
+<b>- Language : https://python.org</b>
+<b>- Library : https://pyrogram.org</b>
+<b>- Server : https://heroku.com</b>
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
