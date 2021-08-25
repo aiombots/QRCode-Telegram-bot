@@ -4,6 +4,11 @@
 # (c) Abhijith N T ;-)
 # Thank you https://github.com/pyrogram/pyrogram :-)
 
+import os
+import requests
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 START_TEXT = """
 Hello {}, This is a QR code generator bot by @NxtStark.
 Made by @HTechMedia
@@ -23,7 +28,7 @@ ABOUT_TEXT = """
 - **Library :** [Pyrogram](https://pyrogram.org)
 - **Server :** [Heroku](https://heroku.com)
 """
-START_BUTTONS = (
+START_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Channel', url='https://telegram.me/HTechMedia'),
         InlineKeyboardButton('Support', url='https://telegram.me/HTechMediaSupport')
@@ -33,14 +38,14 @@ START_BUTTONS = (
         InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
-HELP_BUTTONS = (
+HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('About', callback_data='about'),
         InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
-ABOUT_BUTTONS = (
+ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help'),
@@ -59,7 +64,7 @@ BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-@Clint.on_callback_query()
+@Client.on_callback_query()
 async def cb_data(bot, update):
     if update.data == "home":
         await update.message.edit_text(
@@ -82,7 +87,7 @@ async def cb_data(bot, update):
     else:
         await update.message.delete()
 
-@Clint.on_message(filters.private & filters.command(["start"]))
+@Client.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
@@ -90,7 +95,7 @@ async def start(bot, update):
         reply_markup=START_BUTTONS
     )
 
-@Clint.on_message(filters.private & (filters.photo | filters.document))
+@Client.on_message(filters.private & (filters.photo | filters.document))
 async def remove_background(bot, update):
     if not API:
         await update.reply_text(
