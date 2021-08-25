@@ -18,13 +18,13 @@ HELP_TEXT = """
 Made by @HTechMedia
 """
 ABOUT_TEXT = """
-- **Bot :** QRCode-Telegram-bot
-- **Creator :** [NxtStark](https://telegram.me/NxtStark)
-- **Channel :** [HTechMedia](https://telegram.me/HTechMedia)
-- **Source :** [Click here](https://github.com/HTechMediaYT/QRCode-Telegram-bot/tree/main)
-- **Language :** [Python3](https://python.org)
-- **Library :** [Pyrogram](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
+- Bot : QRCode-Telegram-bot
+- Creator : NxtStark
+- Channel : HTechMedia
+- Source :https://github.com/HTechMediaYT/QRCode-Telegram-bot
+- Language : https://python.org
+- Library : https://pyrogram.org
+- Server : https://heroku.com
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
