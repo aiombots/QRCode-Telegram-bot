@@ -1,9 +1,10 @@
 from pyrogram import Client
-from docker-compose import (
+from config import (
     API_ID,
     API_HASH,
     BOT_TOKEN
 )
+
 
 bot = Client(
     "QR CODE BOT",
