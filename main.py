@@ -1,5 +1,5 @@
 from pyrogram import Client
-from config import (
+from docker-compose import (
     API_ID,
     API_HASH,
     BOT_TOKEN
